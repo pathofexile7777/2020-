@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜 및 시간"
+        android:textSize="15dp"
+        android:textColor="?attr/textcolor"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:textColor="?attr/textcolor"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_view"
+            android:textAlignment="center"
+            android:layout_marginRight="10dp"
+            android:text="yyyy-mm-dd"></TextView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜 선택"
+            android:background="?attr/buttoncolor"
+            android:id="@+id/date_picker"
+            android:layout_marginRight="10dp"
+            ></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_view"
+            android:textAlignment="center"
+            android:textColor="?attr/textcolor"
+            android:layout_marginRight="10dp"
+            android:text="00:00"></TextView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간선택"
+            android:background="?attr/buttoncolor"
+            android:id="@+id/time_picker"></Button>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="식사 "
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp">
+    </TextView>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아침"
+            android:textColor="?attr/textcolor"
+            android:id="@+id/breakfast"
+            android:layout_marginRight="10dp"></RadioButton>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="점심"
+            android:textColor="?attr/textcolor"
+            android:id="@+id/lunch"
+            android:layout_marginRight="10dp"></RadioButton>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저녁"
+            android:id="@+id/dinner"
+            android:textColor="?attr/textcolor"
+            android:layout_marginRight="10dp"></RadioButton>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기타"
+            android:textColor="?attr/textcolor"
+            android:id="@+id/eating"></RadioButton>
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="칼로리 "
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="?attr/textcolor"
+        android:layout_marginLeft="30dp">
+    </TextView>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:textColor="?attr/textcolor"
+        android:maxLength="4"
+        android:hint="kcal"
+        android:id="@+id/kcal"></EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메모"
+        android:textColor="?attr/textcolor"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp">
+    </TextView>
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:inputType="text|textMultiLine"
+        android:minLines="2"
+        android:layout_marginTop="10dp"
+        android:hint="내용을 입력하세요"
+        android:textColor="?attr/textcolor"
+        android:id="@+id/add_meal_memo"></EditText>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/add_meal_check"
+            android:background="?attr/buttoncolor"
+            android:text="확인"></Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/add_meal_cancel"
+            android:background="?attr/buttoncolor"
+            android:text="취소"></Button>
+    </LinearLayout>
+</LinearLayout>

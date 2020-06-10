@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="목표 혈당은 ~입니다"
+        android:textSize="12dp"
+        android:id="@+id/goalBG"
+        android:textColor="?attr/textcolor"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘의 혈당"
+        android:textSize="18dp"
+        android:textColor="?attr/textcolor"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최고 혈당"
+                android:textColor="?attr/textcolor"
+                android:textSize="15dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mgdl"
+                android:textSize="12dp"
+                android:textColor="?attr/textcolor"
+                android:id="@+id/highestBG"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최저 혈당"
+                android:textColor="?attr/textcolor"
+                android:textSize="15dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mgdl"
+                android:textSize="12dp"
+                android:textColor="?attr/textcolor"
+                android:id="@+id/lowestBG"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="평균 혈당"
+                android:textColor="?attr/textcolor"
+                android:textSize="15dp">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mgdl"
+                android:textSize="12dp"
+                android:textColor="?attr/textcolor"
+                android:id="@+id/avgBG"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="평균 혈당 차트보기"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textColor="?attr/textcolor"
+        android:layout_marginLeft="30dp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7일간"
+            android:id="@+id/week"
+            android:background="?attr/buttoncolor"
+            android:layout_weight="1">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1개월간"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/month"
+            android:background="?attr/buttoncolor"
+            android:layout_weight="1">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3개월간"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/month3"
+            android:background="?attr/buttoncolor"
+            android:layout_weight="1">
+        </Button>
+
+    </LinearLayout>
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/chart"
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="fill_horizontal|center">
+    </lecho.lib.hellocharts.view.LineChartView>
+
+    <View style="@style/Divider"/>
+
+</LinearLayout>

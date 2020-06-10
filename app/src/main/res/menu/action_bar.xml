@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <item-->
+<!--        android:id="@+id/action_bar_home"-->
+<!--        android:title="Home"-->
+<!--        app:showAsAction="always"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/action_bar_chart"-->
+<!--        android:title="Chart"-->
+<!--        app:showAsAction="always"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/action_bar_none"-->
+<!--        android:title="None"-->
+<!--        app:showAsAction="always"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/action_bar_setting"-->
+<!--        android:title="Settings"-->
+<!--        app:showAsAction="always"/>-->
+
+    <item
+        android:id="@+id/action_bar_minus"
+        android:icon="@drawable/ic_arrow_back_black_24dp"
+        android:title="minus"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_bar_plus"
+        android:icon="@drawable/ic_arrow_forward_black_24dp"
+        android:title="plus"
+        app:showAsAction="ifRoom"/>
+
+<!--    <item-->
+<!--        android:id="@+id/action_bar_nextuser"-->
+<!--        android:icon="@drawable/ic_person_add_black_24dp"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:title="next_user"/>-->
+
+</menu>

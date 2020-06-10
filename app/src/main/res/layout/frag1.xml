@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/backgroundcolor">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="15dp">
+<!--        android:background="@drawable/roung_border"-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/user_num"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:text="User"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:textSize="25dp">-->
+<!--    </TextView>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/glucose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="100"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="60dp"></TextView>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_trending_flat_black_24dp"
+            android:id="@+id/arrow">
+        </ImageView>
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delta"
+            android:textSize="18dp"
+            android:text="delta"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/low_predict"
+        android:textSize="15dp"
+        android:text="저혈당 예상 시간"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp">
+    </TextView>
+
+    </LinearLayout>
+
+
+    <View style="@style/Divider"/>
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/main_chart"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="fill_horizontal|center">
+    </lecho.lib.hellocharts.view.LineChartView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="160dp"
+        android:layout_marginRight="15sp"
+        android:src="@drawable/ic_restaurant_menu_black_24dp"
+        android:visibility="invisible"
+        app:backgroundTint="#ffffff"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="90dp"
+        android:layout_marginRight="15sp"
+        android:visibility="invisible"
+        android:src="@drawable/ic_directions_run_black_24dp"
+        app:backgroundTint="#ffffff"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+</FrameLayout>

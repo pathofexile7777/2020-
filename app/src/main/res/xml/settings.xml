@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="혈당 설정"
+        android:textColor="?attr/textcolor" />
+
+    <Preference
+        android:key="set_unit"
+        android:title="단위(mg/dl, mmol/l) 설정">
+    </Preference>
+
+    <Preference
+        android:key="set_high_bg"
+        android:title="고혈당 설정"
+        android:textColor="?attr/textcolor">
+    </Preference>
+
+    <Preference
+        android:key="set_low_bg"
+        android:title="저혈당 설정"
+        android:textColor="?attr/textcolor">
+    </Preference>
+
+    <Preference
+        android:key="ideal_bg"
+        android:title="목표 혈당 설정"
+        android:textColor="?attr/textcolor">
+    </Preference>
+
+    <PreferenceCategory
+        android:title="알림 설정"
+        android:textColor="?attr/textcolor" />
+
+    <SwitchPreferenceCompat
+        android:key="alarm_high_bg"
+        android:title="고혈당 알림"
+        android:textColor="?attr/textcolor">
+    </SwitchPreferenceCompat>
+
+    <SwitchPreferenceCompat
+        android:key="alarm_low_bg"
+        android:title="저혈당 알림"
+        android:textColor="?attr/textcolor" >
+    </SwitchPreferenceCompat>
+
+    <PreferenceCategory
+        android:title="기타"
+        android:textColor="?attr/textcolor" />
+
+    <SwitchPreferenceCompat
+        android:key="theme"
+        android:title="블랙 테마"
+        android:textColor="?attr/textcolor">
+    </SwitchPreferenceCompat>
+
+    <Preference
+        android:title="데이터 초기화"
+        android:textColor="?attr/textcolor"
+        android:key="reset">
+    </Preference>
+
+</PreferenceScreen>
